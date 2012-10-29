@@ -1,0 +1,6 @@
+# Debugging options
+
+# Master flag 
+com.dob.ide/debug = false
+
+

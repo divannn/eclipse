@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DOB Ide
+Bundle-SymbolicName: com.dob.ide;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.dob.ide.internal.DobIdePlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui
+Eclipse-LazyStart: true
+Bundle-Vendor: Zodiac Int. and ID
+Bundle-ClassPath: .
+Export-Package: com.dob.ide

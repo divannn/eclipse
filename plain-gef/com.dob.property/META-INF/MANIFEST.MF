@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Property Extra
+Bundle-SymbolicName: com.dob.property
+Bundle-Version: 1.0.0
+Bundle-Activator: com.dob.property.internal.Activator
+Bundle-Vendor: Zodiac Int. and ID
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.ui.views
+Eclipse-LazyStart: true
+Export-Package: com.dob.property,
+ com.dob.property.editor
+Bundle-ClassPath: .

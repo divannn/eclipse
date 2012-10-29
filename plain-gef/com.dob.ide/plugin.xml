@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+	<extension point="org.eclipse.ui.perspectives">
+		<perspective class="com.dob.ide.DobPerspective"
+			icon="icons/dobPerspective.gif" id="dobPerspective"
+			name="DOB"/>
+	</extension>
+	
+	<extension point="org.eclipse.core.runtime.products" id="product">
+		<product application="org.eclipse.ui.ide.workbench"
+			description="DOB Studio Product" name="%productName">
+			<property name="windowImages"
+				value="icons/app-16x16.gif,icons/app-32x32.gif"/>
+			<property name="aboutText" value="%aboutText"/>
+			<property name="aboutImage" value="icons/about.gif"/>
+			<property name="startupForegroundColor" value="808080"/>
+			<property name="startupProgressRect" value="5,180,440,15"/>
+			<property name="startupMessageRect" value="5,160,440,20"/>
+		</product>
+	</extension>
+
+	<extension point="org.eclipse.ui.intro">
+		<intro class="com.dob.ide.internal.ui.DobIntroPart"
+			icon="icons/app-16x16.gif" 
+			id="com.dob.ide.intro">
+		</intro>
+		<introProductBinding
+			  introId="com.dob.ide.intro"
+			  productId="com.dob.ide.product">
+		</introProductBinding> 
+	</extension>
+	
+	
+</plugin>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Absract Model
+Bundle-SymbolicName: com.dob.abstractmodel
+Bundle-Version: 1.0.0
+Bundle-Activator: com.dob.absractmodel.internal.Activator
+Bundle-Vendor: Zodiac Int. and ID
+Bundle-Localization: plugin
+Eclipse-LazyStart: true
+Require-Bundle: org.eclipse.core.runtime
+Export-Package: com.dob.ve.abstractmodel

@@ -1,0 +1,7 @@
+# Debugging options
+
+# Master flag 
+com.dob.ve/debug = false
+
+# Enable logging of editor part activities
+com.dob.ve/debug/editor = info

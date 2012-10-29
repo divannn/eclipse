@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+	<extension point="org.eclipse.ui.editors">
+		<editor
+	        class="com.dob.ve.internal.editor.DobVisualEditor"
+	        contributorClass="com.dob.ve.internal.editor.DobVisualEditorActionBarContributor"
+	        default="true"
+	        extensions="dxf"
+	        icon="icons/editor.gif"
+	        id="dob.visualeditor"
+	        name="DOB Visual Editor">
+		</editor>
+	</extension> 
+	
+   <extension point="org.eclipse.ui.popupMenus">
+		<objectContribution
+            objectClass="com.dob.ve.internal.editor.editpart.IDobElementContextMenuContributor"
+            id="popup.component.new">
+            <filter
+			   name="TYPE"
+			   value="Holder">
+			</filter>
+<!--         <visibility>
+            <objectState
+                  name="TYPE"
+                  value="Container">
+            </objectState>
+         </visibility>-->
+         <menu
+               id="new"
+               label="New"
+               path="new.group">
+            <separator name="newGroup"/>
+         </menu>
+         <action
+               class="com.dob.ve.internal.editor.action.NewObjectActionDelegate:Holder"
+               enablesFor="1"               
+               icon="icons/elem/Holder.gif"
+               id="popup.action.component.new.component"
+               label="Holder"
+               menubarPath="new/newGroup">
+         </action>
+         <action
+               class="com.dob.ve.internal.editor.action.NewObjectActionDelegate:Rectangle"
+               enablesFor="1"               
+               icon="icons/elem/Rectangle.gif"
+               id="popup.action.component.new.component"
+               label="Rectangle"
+               menubarPath="new/newGroup">
+         </action>
+         <action
+               class="com.dob.ve.internal.editor.action.NewObjectActionDelegate:Label"
+               enablesFor="1"               
+               icon="icons/elem/Label.gif"
+               id="popup.action.component.new.component"
+               label="Label"
+               menubarPath="new/newGroup">
+         </action>
+    	</objectContribution>
+		
+	 	<objectContribution
+            objectClass="com.dob.ve.internal.editor.editpart.IDobElementContextMenuContributor"
+            id="popup.component.setVisible">
+			<action
+			       class="com.dob.ve.internal.editor.action.SetVisibleActionDelegate"
+			       enablesFor="1"
+			       id="popup.action.component.setVisible"
+			       menubarPath="org.eclipse.gef.group.view"
+			       label="Show in Editor">
+<!--			   <enablement>
+					<objectState
+						name="CHANGEABLE"
+						value="true"/>
+			   </enablement>-->
+			</action>
+		</objectContribution>
+		<objectContribution
+            objectClass="com.dob.ve.internal.editor.editpart.IDobElementContextMenuContributor"
+            id="popup.component.showProperties">
+			<action
+			       class="com.dob.ve.internal.editor.action.ShowPropertiesActionDelegate"
+			       enablesFor="1"
+			       id="popup.action.component.showProperties"
+			       menubarPath="org.eclipse.gef.group.view"
+			       label="Properties">
+			</action>
+		</objectContribution>
+    </extension>
+    
+</plugin>

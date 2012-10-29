@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DOB Visual Editor
+Bundle-SymbolicName: com.dob.ve;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Activator: com.dob.ve.internal.DobVEPlugin
+Bundle-Vendor: Zodiac Int. and ID
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.views,
+ org.eclipse.gef,
+ com.dob.abstractmodel,
+ com.dob.property,
+ com.dob.util
+Eclipse-LazyStart: true

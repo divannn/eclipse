@@ -1,0 +1,8 @@
+Made using Eclipse 3.2.2 and GEF 3.2.2.
+Product dob.product runs with standard application "org.eclipse.ui.ide.workbench"
+and includes following standard features:
+
+- rcp
+- gef
+- platform
+

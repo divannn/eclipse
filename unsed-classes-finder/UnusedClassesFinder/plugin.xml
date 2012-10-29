@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="DDD.findUnusedClasses"
+            objectClass="org.eclipse.jdt.core.IJavaElement">
+         <visibility>
+            <or>
+               <objectClass name="org.eclipse.jdt.core.IJavaProject"/>
+               <objectClass name="org.eclipse.jdt.core.IPackageFragment"/>
+            </or>
+         </visibility>
+         <menu
+               label="Find All Unused Classes"
+               path="additions"
+               id="DDD.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="id.popup.actions.FindUnusedClassesInWorkspaceAction"
+               enablesFor="1"
+               id="inWorkspaceAction"
+               label="Workspace Search Scope"
+               menubarPath="DDD.menu1/group1"/>
+         <action
+               class="id.popup.actions.FindUnusedClassesInProjectAction"
+               enablesFor="1"
+               id="inProjectAction"
+               label="Project Search Scope"
+               menubarPath="DDD.menu1/group1"/>
+      </objectContribution>
+   </extension>
+
+</plugin>
